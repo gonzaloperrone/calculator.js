@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="img/icon1.png">
+
+</head>
+
+<body>
+    <!--Contenedor que contiene las calculadoras-->
+
+    <div class="container" id="container">
+        <div class="row">
+
+            <!--Primera calculadora-->
+            <div class="col-lg-6">
+                <div>
+                    <h1><input type="radio" id="calc1" name="calcul"> Calculadora 1 </h1>
+                </div>
+
+
+                <div id="calculator1" class="text-center">
+                    <form name="calculator1">
+
+                        <input type="text" id="input1" name="result" autocomplete="off" readonly required>
+
+                        <input type="button" id="7" value="7" onclick="document.calculator1.result.value += '7'"
+                            disabled>
+                        <input type="button" id="8" value="8" onclick="document.calculator1.result.value += '8'"
+                            disabled>
+                        <input type="button" id="9" value="9" onclick="document.calculator1.result.value += '9'"
+                            disabled>
+                        <input type="button" id="division" value="/" class="operator"
+                            onclick="document.calculator1.result.value += '/'" disabled>
+                        <br>
+                        <input type="button" id="4" value="4" onclick="document.calculator1.result.value += '4'"
+                            disabled>
+                        <input type="button" id="5" value="5" onclick="document.calculator1.result.value += '5'"
+                            disabled>
+                        <input type="button" id="6" value="6" onclick="document.calculator1.result.value += '6'"
+                            disabled>
+                        <input type="button" id="multiplication" value="*" class="operator"
+                            onclick="document.calculator1.result.value += '*'" disabled>
+                        <br>
+                        <input type="button" id="1" value="1" onclick="document.calculator1.result.value += '1'"
+                            disabled>
+                        <input type="button" id="2" value="2" onclick="document.calculator1.result.value += '2'"
+                            disabled>
+                        <input type="button" id="3" value="3" onclick="document.calculator1.result.value += '3'"
+                            disabled>
+                        <input type="button" id="rest" value="-" class="operator"
+                            onclick="document.calculator1.result.value += '-'" disabled>
+                        <br>
+                        <input type="button" id="0" class="down" value="0"
+                            onclick="document.calculator1.result.value += '0'" disabled>
+                        <input type="reset" id="clear" class="down" value="C" disabled>
+                        <input type="button" id="resultEqual" class="equal down" value="="
+                            onclick="document.calculator1.result.value = eval(document.calculator1.result.value)"
+                            disabled>
+                        <input type="button" id="plus" value="+" class="operator down"
+                            onclick="document.calculator1.result.value += '+'" disabled>
+                    </form>
+                </div>
+            </div>
+
+            
+            <!--Segunda calculadora-->
+            <div id="calc2" class="col-lg-6">
+                <div>
+                    <h1><input type="radio" id="calc2" name="calcul"> Calculadora 2</h1>
+                </div>
+
+                <input type="number" id="value1" placeholder="Primer valor"  disabled>
+
+                <select id="operators" disabled>
+                    <option value="" disabled selected>Operador</option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">X</option>
+                </select>
+
+                <input type="number" id="value2" placeholder="Segundo valor"  disabled>
+
+
+                <div id="resultCalc2">
+                    <p><button id="calculate" class="btn btn-success" disabled>Calcular</button> Resultado = <output id="resultOp"></output></p>
+                </div>
+
+                <div id="resetCalc2">
+                    <button class="btn btn-danger" id="reset" style="float: right;" disabled>Restablecer</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
