@@ -59,14 +59,15 @@ input[type=button]{
 }
 
 body{
-	background-image: url("/img/fondo.jpg");
-	background-repeat: no-repeat;
+	background: linear-gradient(to bottom, rgb(65, 65, 65), rgb(255, 255, 255));
+		background-repeat: no-repeat;
 	background-size: cover;
 }
 
 h1{
 	color: rgb(0, 0, 0);
 	margin-bottom: 30px;
+	margin-top: 20px;
 }
 
 .container{

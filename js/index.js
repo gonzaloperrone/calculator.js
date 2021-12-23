@@ -36,6 +36,7 @@ function alerts() {
     }
 }
 
+//Función para restablecer los datos de la calculadora 2
 document.querySelector("#reset").addEventListener('click', () => {
     document.getElementById("value1").value = "";
     document.getElementById("value2").value = "";
