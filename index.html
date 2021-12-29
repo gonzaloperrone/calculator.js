@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadoras JavaScript</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
@@ -70,28 +71,31 @@
                 </div>
             </div>
 
-            
+
             <!--Segunda calculadora-->
             <div id="calc2" class="col-lg-6">
                 <div>
                     <h1><input type="radio" id="calc2" name="calcul"> Calculadora 2</h1>
                 </div>
+                <div>
+                    <input type="number" id="value1" placeholder="Primer valor" disabled>
 
-                <input type="number" id="value1" placeholder="Primer valor"  disabled>
+                    <select name="operators" id="operators" onchange="sq(this.value)" disabled>
+                        <option value="" disabled selected>Operador</option>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">X</option>
+                        <option id="sq" value="^">&#8730</option>
+                    </select>
 
-                <select id="operators" disabled>
-                    <option value="" disabled selected>Operador</option>
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                    <option value="/">/</option>
-                    <option value="*">X</option>
-                </select>
-
-                <input type="number" id="value2" placeholder="Segundo valor"  disabled>
-
+                    <input type="number" id="value2" disabled placeholder="Segundo valor">
+                <div id="added"></div>
+                </div>
 
                 <div id="resultCalc2">
-                    <p><button id="calculate" class="btn btn-success" disabled>Calcular</button> Resultado = <output id="resultOp"></output></p>
+                    <p><button id="calculate" class="btn btn-success" disabled>Calcular</button> Resultado = <output
+                            id="resultOp"></output></p>
                 </div>
 
                 <div id="resetCalc2">

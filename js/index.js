@@ -14,25 +14,26 @@ document.querySelector("#calculate").addEventListener('click', () => {
         result = value1 / value2;
     } else if (operation === "*") {
         result = value1 * value2;
+    } else if (operation === "^") {
+        result = Math.sqrt(value1);
     }
     //console.log(result)
     document.getElementById("resultOp").innerHTML = result;
 
-    alerts();
+    if (operation === "") {
+        alert("Debe seleccionar un operador");
+        document.getElementById("resultOp").innerHTML = "";
+    }
 });
 
+//Función para agregar texto al seleccionar raíz cuadrada
+function sq(val) {
+    var val = document.getElementById("operators").value;
 
-//Función para las alertas de la calculadora 2
-function alerts() {
-    const val1 = document.getElementById("value1").value;
-    const val2 = document.getElementById("value2").value;
-
-    if (val1 === "" && val2 === "") {
-        alert("Debe ingresar los dos valores")
-    } else if (val1 === "" && val2 !== "") {
-        alert("Debe ingresar el primer valor")
-    } else if (val1 !== "" && val2 === "") {
-        alert("Debe ingresar el segundo valor")
+    if (val === "^") {
+        document.getElementById('added').innerHTML = "Se obtendrá la raíz cuadrada del primer valor"
+    } else {
+        document.getElementById('added').innerHTML = ""
     }
 }
 
@@ -42,8 +43,7 @@ document.querySelector("#reset").addEventListener('click', () => {
     document.getElementById("value2").value = "";
     document.querySelector("#operators").value = "";
     document.getElementById("resultOp").innerHTML = "";
-
-
+    document.getElementById('added').innerHTML = "";
 })
 
 //Deshabilitar la calculadora no seleccionada
