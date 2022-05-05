@@ -1,4 +1,26 @@
-#calculator1{
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+
+* {
+	font-family: 'Oswald', sans-serif;
+}
+
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80vh;
+}
+
+.container {
+	border: 3px solid black;
+	background-color: rgb(255, 255, 255);
+	margin: 40px auto;
+	border-radius: 40px;
+}
+
+/*Calculator 1*/
+
+#calculator1 {
 	max-height: 740px;
 	max-width: 340px;
 	border: 2px solid black;
@@ -7,17 +29,17 @@
 	margin-bottom: 50px;
 }
 
-form{
+form {
 	width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
+	max-width: 600px;
+	margin: 0 auto;
+	align-items: center;
+	background-color: black;
 }
 
-#input1{
+#input1 {
 	margin-top: 20px;
+	margin-bottom: 15px;
 	width: 100%;
 	border-radius: 10px;
 	cursor: default;
@@ -27,10 +49,12 @@ form{
 	background-color: rgb(0, 0, 0);
 	color: white;
 	outline: none;
-	border: 0;
+	border: none;
+	border-bottom: 2px solid rgb(43, 100, 255) ;
 }
 
-input[type=button], input[type=reset]{
+input[type=button],
+input[type=reset] {
 	cursor: pointer;
 	font-weight: bold;
 	border-radius: 50%;
@@ -41,56 +65,46 @@ input[type=button], input[type=reset]{
 	border: 0;
 }
 
-.equal{
+.equal {
 	background-color: orange;
 }
 
-.operator{
+.operator {
 	background-color: rgb(2, 71, 219);
 	color: white;
 }
 
-input[type=button]{
+input[type=button] {
 	margin-left: 4px;
 }
 
-.down{
+.down {
 	margin-bottom: 20px !important;
 }
 
-body{
-	background: linear-gradient(to bottom, rgb(65, 65, 65), rgb(255, 255, 255));
-		background-repeat: no-repeat;
-	background-size: cover;
-}
-
-h1{
+h1 {
 	color: rgb(0, 0, 0);
 	margin-bottom: 30px;
 	margin-top: 20px;
 }
 
-.container{
-	background-color: rgb(255, 255, 255);
-	margin-top: 20px;
-	border-radius: 40px;
-}
+/*Caclulator 2*/
 
-#resultCalc2{
+#resultCalc2 {
 	margin-top: 15px;
 }
 
-#calc2{
+#calc2 {
 	margin-bottom: 20px;
 }
 
-output{
+output {
 	font-size: 20px;
 	font-weight: bold;
 	margin-left: 10px;
 }
 
-#calculate{
+#calculate {
 	margin-right: 5px;
 	border: none;
 	border-radius: 10px;
@@ -98,29 +112,29 @@ output{
 	padding: 5px;
 }
 
-#reset{
+#reset {
 	margin-right: 60px;
 }
 
-input[type=number]{
-    width: 180px;
-} 
+input[type=number] {
+	width: 180px;
+}
 
-#value1{
+#value1 {
 	border-bottom: solid 1px;
 	border-top: none;
 	border-left: none;
 	border-right: none;
 }
 
-#value2{
+#value2 {
 	border-bottom: solid 1px;
 	border-top: none;
 	border-left: none;
 	border-right: none;
 }
 
-select{
+select {
 	border: none;
 	margin-right: 20px;
 	margin-left: 20px;

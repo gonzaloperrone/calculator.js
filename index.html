@@ -15,21 +15,18 @@
 </head>
 
 <body>
-    <!--Contenedor que contiene las calculadoras-->
 
+    <h1 class="text-center">CACLULADORAS</h1>
+    <!--Container-->
     <div class="container" id="container">
         <div class="row">
-
-            <!--Primera calculadora-->
+            <!--First calculator-->
             <div class="col-lg-6">
                 <div>
                     <h1><input type="radio" id="calc1" name="calcul"> Calculadora 1 </h1>
                 </div>
-
-
                 <div id="calculator1" class="text-center">
                     <form name="calculator1">
-
                         <input type="text" id="input1" name="result" autocomplete="off" readonly required>
 
                         <input type="button" id="7" value="7" onclick="document.calculator1.result.value += '7'"
@@ -71,8 +68,7 @@
                 </div>
             </div>
 
-
-            <!--Segunda calculadora-->
+            <!--Second calculator-->
             <div id="calc2" class="col-lg-6">
                 <div>
                     <h1><input type="radio" id="calc2" name="calcul"> Calculadora 2</h1>
@@ -90,7 +86,7 @@
                     </select>
 
                     <input type="number" id="value2" disabled placeholder="Segundo valor">
-                <div id="added"></div>
+                    <div id="added"></div>
                 </div>
 
                 <div id="resultCalc2">
@@ -101,7 +97,6 @@
                 <div id="resetCalc2">
                     <button class="btn btn-danger" id="reset" style="float: right;" disabled>Restablecer</button>
                 </div>
-
             </div>
         </div>
     </div>
