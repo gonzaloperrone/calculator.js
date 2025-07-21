@@ -16,14 +16,14 @@
 
 <body>
 
-    <h1 class="text-center">CACLULADORAS</h1>
+    <h1 class="text-center">✨ CALCULADORAS MODERNAS ✨</h1>
     <!--Container-->
     <div class="container" id="container">
         <div class="row">
             <!--First calculator-->
             <div class="col-lg-6">
                 <div>
-                    <h1><input type="radio" id="calc1" name="calcul"> Calculadora 1 </h1>
+                    <h1><input type="radio" id="calc1" name="calcul"> 🧮 Calculadora Clásica </h1>
                 </div>
                 <div id="calculator1" class="text-center">
                     <form name="calculator1">
@@ -37,7 +37,7 @@
                             disabled>
                         <input type="button" id="division" value="/" class="operator"
                             onclick="document.calculator1.result.value += '/'" disabled>
-                        <br>
+
                         <input type="button" id="4" value="4" onclick="document.calculator1.result.value += '4'"
                             disabled>
                         <input type="button" id="5" value="5" onclick="document.calculator1.result.value += '5'"
@@ -46,7 +46,7 @@
                             disabled>
                         <input type="button" id="multiplication" value="*" class="operator"
                             onclick="document.calculator1.result.value += '*'" disabled>
-                        <br>
+
                         <input type="button" id="1" value="1" onclick="document.calculator1.result.value += '1'"
                             disabled>
                         <input type="button" id="2" value="2" onclick="document.calculator1.result.value += '2'"
@@ -55,14 +55,14 @@
                             disabled>
                         <input type="button" id="rest" value="-" class="operator"
                             onclick="document.calculator1.result.value += '-'" disabled>
-                        <br>
-                        <input type="button" id="0" class="down" value="0"
+
+                        <input type="button" id="0" value="0"
                             onclick="document.calculator1.result.value += '0'" disabled>
-                        <input type="reset" id="clear" class="down" value="C" disabled>
-                        <input type="button" id="resultEqual" class="equal down" value="="
+                        <input type="reset" id="clear" value="C" disabled>
+                        <input type="button" id="resultEqual" class="equal" value="="
                             onclick="document.calculator1.result.value = eval(document.calculator1.result.value)"
                             disabled>
-                        <input type="button" id="plus" value="+" class="operator down"
+                        <input type="button" id="plus" value="+" class="operator"
                             onclick="document.calculator1.result.value += '+'" disabled>
                     </form>
                 </div>
@@ -71,31 +71,41 @@
             <!--Second calculator-->
             <div id="calc2" class="col-lg-6">
                 <div>
-                    <h1><input type="radio" id="calc2" name="calcul"> Calculadora 2</h1>
+                    <h1><input type="radio" id="calc2_radio" name="calcul"> 🔢 Calculadora Avanzada</h1>
                 </div>
-                <div>
-                    <input type="number" id="value1" placeholder="Primer valor" disabled>
+                <div class="calc2-container">
+                    <div class="calc2-inputs">
+                        <div class="calc2-row">
+                            <input type="number" id="value1" placeholder="Primer valor" disabled>
+                        </div>
+                        <div class="calc2-row">
+                            <select name="operators" id="operators" onchange="sq(this.value)" disabled>
+                                <option value="" disabled selected>Seleccionar operador</option>
+                                <option value="+">➕ Suma</option>
+                                <option value="-">➖ Resta</option>
+                                <option value="/">➗ División</option>
+                                <option value="*">✖️ Multiplicación</option>
+                                <option id="sq" value="^">√ Raíz cuadrada</option>
+                            </select>
+                        </div>
+                        <div class="calc2-row">
+                            <input type="number" id="value2" disabled placeholder="Segundo valor">
+                        </div>
+                        <div id="added"></div>
+                    </div>
 
-                    <select name="operators" id="operators" onchange="sq(this.value)" disabled>
-                        <option value="" disabled selected>Operador</option>
-                        <option value="+">+</option>
-                        <option value="-">-</option>
-                        <option value="/">/</option>
-                        <option value="*">X</option>
-                        <option id="sq" value="^">&#8730</option>
-                    </select>
+                    <div class="calc2-buttons">
+                        <button id="calculate" disabled>🚀 Calcular</button>
+                    </div>
 
-                    <input type="number" id="value2" disabled placeholder="Segundo valor">
-                    <div id="added"></div>
-                </div>
+                    <div id="resultCalc2" class="result-section">
+                        <span class="result-label">Resultado =</span>
+                        <output id="resultOp"></output>
+                    </div>
 
-                <div id="resultCalc2">
-                    <p><button id="calculate" class="btn btn-success" disabled>Calcular</button> Resultado = <output
-                            id="resultOp"></output></p>
-                </div>
-
-                <div id="resetCalc2">
-                    <button class="btn btn-danger" id="reset" style="float: right;" disabled>Restablecer</button>
+                    <div id="resetCalc2" class="calc2-buttons">
+                        <button id="reset" disabled>🔄 Restablecer</button>
+                    </div>
                 </div>
             </div>
         </div>

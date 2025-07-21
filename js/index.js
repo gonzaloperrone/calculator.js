@@ -17,12 +17,18 @@ document.querySelector("#calculate").addEventListener('click', () => {
     } else if (operation === "^") {
         result = Math.sqrt(value1);
     }
-    //console.log(result)
-    document.getElementById("resultOp").innerHTML = result;
-
+    
     if (operation === "") {
         alert("Debe seleccionar un operador");
         document.getElementById("resultOp").innerHTML = "";
+        document.getElementById("resultCalc2").style.display = "none";
+        document.getElementById("resetCalc2").style.display = "none";
+    } else {
+        //console.log(result)
+        document.getElementById("resultOp").innerHTML = result;
+        // Mostrar las secciones de resultado y restablecer
+        document.getElementById("resultCalc2").style.display = "flex";
+        document.getElementById("resetCalc2").style.display = "flex";
     }
 });
 
@@ -44,6 +50,9 @@ document.querySelector("#reset").addEventListener('click', () => {
     document.querySelector("#operators").value = "";
     document.getElementById("resultOp").innerHTML = "";
     document.getElementById('added').innerHTML = "";
+    // Ocultar las secciones de resultado y restablecer
+    document.getElementById("resultCalc2").style.display = "none";
+    document.getElementById("resetCalc2").style.display = "none";
 })
 
 //Deshabilitar la calculadora no seleccionada
@@ -74,7 +83,7 @@ document.getElementById("calc1").addEventListener("change", function () {
     document.getElementById("plus").disabled = false;
 });
 
-document.getElementById("calc2").addEventListener("change", function () {
+document.getElementById("calc2_radio").addEventListener("change", function () {
     document.getElementById("input1").disabled = true;
     document.getElementById("7").disabled = true;
     document.getElementById("8").disabled = true;
